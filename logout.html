@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Регистрация аккаунта</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Регистрация аккаунта</h1>
+    <form id="registration-form">
+      <input type="text" id="username" placeholder="Имя пользователя" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Пароль" required />
+      <input type="submit" value="Зарегистрироваться" />
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Отменяем перезагрузку страницы после отправки формы
+
+      // Здесь вы можете добавить код для отправки данных регистрации на сервер
+      // Например, с использованием AJAX или Fetch API
+
+      // Показываем сообщение об успешной регистрации
+      alert('Вы успешно зарегистрировались!');
+    });
+  </script>
+</body>
+</html>
